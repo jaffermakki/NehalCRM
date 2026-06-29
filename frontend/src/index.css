@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Exact Posh light theme requested from HTML */
+  --bg: #fafaf8; --surface: #ffffff; --surface2: #f4f6f4; --surface3: #eef1ee;
+  --border: #e6e8e3; --border2: #d7dbd2;
+  --accent: #0f8b5f; --accent2: #0a6e49; --accent-glow: rgba(15,139,95,.10);
+  --green: #0f8b5f; --green-bg: rgba(15,139,95,.10);
+  --amber: #b8860b; --amber-bg: rgba(184,134,11,.10);
+  --red: #c0392b; --red-bg: rgba(192,57,43,.09);
+  --purple: #6b5b95; --purple-bg: rgba(107,91,149,.09);
+  --gold: #b8964a; --gold-bg: rgba(184,150,74,.12);
+  --text: #1a1d1a; --text2: #6b716a; --text3: #a3a89e;
+  --radius: 9px; --radius-lg: 14px;
+  --font: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+}
+
+/* Base Component classes exactly from HTML */
+.btn {
+  @apply inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-[8px] text-[13px] font-semibold cursor-pointer transition-colors border-none whitespace-nowrap;
+  font-family: var(--font);
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent2); }
+.btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border2); }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.03);
+}
